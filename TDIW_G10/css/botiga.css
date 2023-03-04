@@ -1,0 +1,819 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MuseoModerno', cursive;
+}
+
+#layout {
+    width: 100%;
+    column-gap: 5px;
+    row-gap: 5px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    background-image: url("/img/background3.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* MENU SUPERIOR PÀGINA (LINEA TEXT + MENU)*/
+#capçalera {
+    display: grid;
+    grid-template-areas:
+  'info_superior'
+  'menu_complert';
+}
+
+#capçalera section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    vertical-align: center;
+}
+
+/* MENU SUPERIOR PAGINA (LINEA TEXT)*/
+header {
+    height: max-content;
+    justify-content: center;
+    background-color: rgba(100, 98, 95, 0.284);
+}
+
+/* MENU SUPERIOR PAGINA (MENU)*/
+.menu {
+    display: grid;
+    grid-template-areas:
+  'logo_inici boto_categories menu_buscar menu_user';
+    background-color: rgba(244, 244, 244, .4);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom: 1px solid black;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.menu li {
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background-color: rgb(227, 202, 148);
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    text-align: center;
+    text-align-all: center;
+    color: black;
+    position: relative;
+}
+
+.menu li:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* MENU SUPERIOR PAGINA (LOGO WEB)*/
+.logo_inici {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    align-self: center;
+}
+
+/* MENU SUPERIOR PAGINA (BOTO CATEGORIES)*/
+.boto_categories {
+    padding: 8px;
+    margin: 10px;
+}
+
+/* MENU SUPERIOR PAGINA (MENU BUSCAR)*/
+.menu_buscar {
+    display: flex;
+    justify-content: center;
+    float: left;
+    clear: none;
+}
+
+.barra_buscar {
+    width: 350px;
+    height: 40px;
+    background-color: antiquewhite;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 5px;
+    text-align: center;
+}
+
+.boto_buscar {
+    height: 40px;
+    background-color: antiquewhite;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding-inline: 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.boto_buscar:hover {
+    background-color: rgb(154, 147, 138);
+    cursor: pointer;
+}
+
+/* MENU SUPERIOR PAGINA (MENU USUARI)*/
+.menu_user img {
+    width: 40px;
+    height: auto;
+    margin: 7px;
+}
+
+/*PEU DE PAGINA (FOOTER)*/
+footer {
+    background-color: rgba(244, 244, 244, .4);
+    border-radius: 25px;
+    border-top: 1px solid black;
+}
+
+#peu_pagina {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0;
+}
+
+#peu_pagina .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#peu_pagina .box figure img {
+    width: 250px;
+}
+
+#peu_pagina .box h2 {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+#peu_pagina .box p {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#peu_pagina .red_social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #2e4f6c;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+#peu_pagina .red_social a:hover {
+    color: #000000;
+}
+
+#linea_inferior {
+    background-color: rgba(100, 98, 95, 0.284);
+    padding: 8px 8px;
+    text-align: center;
+    color: black;
+}
+
+#linea_inferior small {
+    font-size: 15px;
+}
+
+/*ESTIL FORMULARI CONTACTE */
+.form_contacte label {
+    display: block;
+    margin: 4px;
+    letter-spacing: 1px;
+}
+
+.form_contacte form {
+    width: 400px;
+}
+
+.form_contacte form label {
+    color: #ffffff;
+}
+
+.form_contacte input, textarea {
+    width: 380px;
+    height: 30px;
+    background: #2e4f6c;
+    border: 1px solid #000000;
+    padding: 5px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.form_contacte ::placeholder {
+    color: #ffffff;
+    padding: 5px;
+}
+
+.form_contacte textarea {
+    height: 75px;
+    padding: 5px;
+}
+
+.form_contacte #submit {
+    width: 85px;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/* DIV AMB EL CONTINGUT DE CADA PAGINA (MENU I FOOTER NO INCLOSOS) */
+
+#contingutpagines{
+    min-height: 400px;
+}
+
+
+.contingut_pagines h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.contingut_pagines ul {
+    border-radius: 6px;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.36);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.36);
+}
+
+
+.logo_inici {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MENU DE CADA CATEGORIA*/
+/***************************************************/
+#categoria{
+    margin: 20px;
+    padding: 20px;
+    list-style-type: none;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+#categoria li {
+    width: 282px;
+}
+
+#categoria ul li:hover {
+    background-color: #6e8396;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px;
+    border-radius: 6px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#categoria ul {
+    list-style-type: none;
+    margin: auto;
+    width: max-content; /*fa que el text estigui sota la img*/
+    padding: 8px;
+    overflow: hidden;
+    background-color: #33333333;
+    border-radius: 6px;
+}
+
+#categoria div {
+    display: grid;
+    grid-template-areas:
+  'camiseta1 camiseta2 camiseta3';
+    justify-content: center;
+}
+
+#categoria ul li {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(97, 147, 190, 0.74);
+    margin: 35px;
+    border-radius: 6px;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.etiqueta_categoria {
+    padding: 5px;
+    margin: 5px;
+    width: 220px;
+    height: auto;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.text_producte {
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.categoria {
+    display: grid;
+    grid-template-areas:
+  'categoria1 categoria2 categoria3';
+}
+
+.menu_categories {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.fotosInici {
+    display: grid;
+    grid-template-areas:
+  'barça madrid'
+  'city psg';
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.fotosInici div {
+    margin: 15px;
+}
+
+@media (max-width: 1400px) {
+    .fotosInici {
+        display: grid;
+        grid-template-areas:
+    'barça' 'madrid' 'city' 'psg';
+    }
+}
+
+@media (max-width: 1200px) {
+    .menu_categories {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    #categoria div {
+        display: grid;
+        grid-template-areas:
+    'camiseta1' 'camiseta2' 'camiseta3';
+    }
+}
+
+#detallProducte{
+    max-width: 1071.95px;
+    border-radius: 6px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+    'imatgeCamiseta nomCamiseta'
+    'imatgeCamiseta descripcioCamiseta'
+    'imatgeCamiseta preuCamiseta'
+    'imatgeCamiseta botoCamiseta';
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #33333333;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+#nomProd{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#imgProd{
+    align-items: center;
+    margin: auto;
+}
+
+#preuProd{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#botoProd{
+    background-color: rgba(97, 147, 190, 0.74);
+    border-radius: 6px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+}
+
+#botoProd:hover{
+    cursor: pointer;
+    background-color: #6e8396;
+}
+/**********************************/
+
+
+@media (max-width: 900px) {
+
+    .peu_pagina .grup1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0;
+    }
+
+    .menu_complert {
+        grid-template-areas:
+    'logo_inici' 'menu_categories'
+    'menu_buscar' 'usuari';
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .menu_complert {
+        grid-template-areas:
+    'logo_inici' 'menu_categories'
+    'menu_buscar' 'usuari';
+    }
+
+}
+
+
+/*LOGIN-REGISTER*/
+
+.login_register {
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url('//img/background2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login, .register {
+    width: 400px;
+    height: auto;
+    background-color: #4e4d4d;
+    margin: auto;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    color: white;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+#seccioLogin{
+    padding: 90px;
+}
+
+.register {
+    height: auto;
+    align-content: center;
+}
+
+.login h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.register h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.controls {
+    width: 100%;
+    border: 1px solid #017bab;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    background: #017bab;
+    border: none;
+    color: white;
+    margin-inline: auto;
+    margin-block: 10px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    color: #6193be;
+}
+
+.login p {
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+
+.login a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login a:hover {
+    color: #6193be;
+}
+
+.fotosInici {
+    box-sizing: border-box;
+}
+
+.fotosInici .columna {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.fotosInici .fila::after {
+    content: "";
+    clear: both;
+    display: table;
+    padding: 5px;
+}
+
+.fotosInici img {
+    border-radius: 8px;
+}
+
+.etiqueta_categoria {
+    width: auto;
+}
+
+.etiqueta_categoria li {
+    cursor: pointer;
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    padding: 5px 10px;
+    background-color: rgb(227, 202, 148);
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    text-align: center;
+    /*text-align-all: center;*/
+    color: black;
+    position: relative;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* DESPLEGABLE CARRITO */
+
+#carrito{
+    position: absolute;
+    top: 135px;
+    right: 0;
+    width: 500px;
+    height: auto;
+    background-color: white;
+    transition: all 500ms ease;
+    border-radius: 6px;
+    display: grid;
+    grid-template-areas:
+      'paragraphCarrito'
+      'imageCarrito'
+      'buttonCarrito';
+}
+
+#verCarrito{
+    font-size: 25px;
+}
+
+#carritIMG {
+    display: block;
+    margin-inline: auto;
+    margin-block: 10px;
+    height: 269px;
+}
+
+#titolCarrito {
+    margin-top: 40px;
+    font-size: 40px;
+    max-height: 90px;
+}
+
+#quan{
+    width: 70px;
+    height: 40px;
+    background-color: antiquewhite;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: 'MuseoModerno', cursive;
+    margin: 5px;
+}
+
+/* PAGINA CARRITO */
+#pagCarrito{
+    align-items: center;
+    align-content: center;
+    vertical-align: center;
+    margin: auto;
+    max-width: 1500px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #33333333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+#pagCarrito h1{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#botoPagCarrito{
+    background-color: rgba(97, 147, 190, 0.74);
+    border-radius: 6px;
+    padding: 15px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-block: 10px;
+    margin-inline: 5px;
+
+}
+
+#msgCarrito{
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#botoPagCarrito:hover{
+    cursor: pointer;
+    background-color: #6e8396;
+}
+
+#pagCarrito table{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#pagCarrito th{
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: dotted 1px black;
+}
+
+#pagCarrito td{
+    text-align: center;
+    height: 50px;
+    vertical-align: center;
+}
+
+.modifQuant{
+    width: 20px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    margin-inline: 5px;
+}
+
+.modifQuant:hover{
+    cursor: pointer;
+    background-color: rgba(60, 49, 49, 0.21);
+}
+
+.eliminarProducte{
+    border: none;
+    background-color: rgba(255,231,231,0) ;
+}
+
+.eliminarProducte:hover{
+    cursor: pointer;
+}
+
+.eliminarProducte img{
+    width: 30px;
+    height: 30px;
+}
+
+#botoCarrito {
+    height: auto;
+    background-color: rgba(255,231,231,0);
+    border: none;
+}
+
+#productes {
+    margin-inline: 15px;
+}
+
+#productes table{
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#productes th{
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-bottom: dotted 1px black;
+}
+
+#productes td{
+    text-align: center;
+    height: 50px;
+    vertical-align: center;
+}
+
+#dataPedido{
+    text-align: left;
+}
+
+#dataPedido label{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#pagCarrito #taulaPedidos {
+    margin-bottom: 40px;
+}
+
+#fotoNom{
+    display: flex;
+    align-items: center;
+}
+
+#imgUser{
+    border-radius: 100%;
+    border: 1px black solid;
+    margin-inline: 35px;
+}
+
+#nomUsuari{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#contingut{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
